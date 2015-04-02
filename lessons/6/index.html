@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaflet Workshop</title>
+
+    <!-- Leaflet Styles -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+
+    <!-- our styles -->
+    <style>
+        body { background: #ccc; }
+        h1, p {
+            text-align: center;
+        }
+
+        #map {
+            width: 80%;
+            height: 500px;
+            margin: 0 auto;
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Using the layer control</h1>
+
+    <!-- Map Container -->
+    <div id="map"></div>
+
+    <p><a href="solution.html">solution</a></p>
+
+    <!-- Leaflet JavaScript -->
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+    <script>
+
+        // Add map
+        var map = L.map('map').setView([35.784, -78.636], 14);
+
+        // Add base tiles to the map
+        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+            maxZoom: 18
+        }).addTo(map);
+
+    </script>
+</body>
+</html>
